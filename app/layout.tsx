@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { contacts } from "./lib/satrex";
 import CurrentYear from "./current-year";
+import CookieBanner from "./cookie-banner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://satrex.ru"),
@@ -16,19 +18,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-slate-950 text-slate-200 antialiased">
         <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-            <a href="/" className="text-xl font-bold tracking-tight text-white">
+            <Link href="/" className="text-xl font-bold tracking-tight text-white">
               САТРЭКС<span className="text-emerald-400">.</span>
-            </a>
+            </Link>
             <nav className="hidden gap-8 text-sm text-slate-300 md:flex">
-              <a className="transition hover:text-white" href="/#services">
+              <Link className="transition hover:text-white" href="/#services">
                 Услуги
-              </a>
-              <a className="transition hover:text-white" href="/#about">
+              </Link>
+              <Link className="transition hover:text-white" href="/#about">
                 О компании
-              </a>
-              <a className="transition hover:text-white" href="/#contacts">
+              </Link>
+              <Link className="transition hover:text-white" href="/#contacts">
                 Контакты
-              </a>
+              </Link>
             </nav>
             <a
               href={contacts.phoneHref}
@@ -48,16 +50,24 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <p>
               © <CurrentYear /> САТРЭКС, Самара. Грузовая станция Кряж Кбш ЖД.
             </p>
-            <p>
+            <p className="flex flex-col gap-1 md:items-end">
               <a
                 className="transition hover:text-white"
                 href={`mailto:${contacts.email}`}
               >
                 {contacts.email}
               </a>
+              <Link
+                className="transition hover:text-white"
+                href="/privacy/"
+              >
+                Политика обработки персональных данных
+              </Link>
             </p>
           </div>
         </footer>
+
+        <CookieBanner />
       </body>
     </html>
   );
