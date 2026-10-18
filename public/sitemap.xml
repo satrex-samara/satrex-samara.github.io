@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Update when services change: keep in sync with app/lib/satrex.ts -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://satrex.ru/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/arenda-poluvagonov/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/negabaritnye-gruzy/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/zheleznodorozhnyj-adres/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/pogruzochno-razgruzochnye-raboty/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/terminalno-skladskie-uslugi/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/podacha-uborka-vagonov/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/vzveshivanie-gruzov/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/shemy-pogruzki/</loc></url>
+  <url><loc>https://satrex.ru/uslugi/kompleksnaya-logistika/</loc></url>
+  <url><loc>https://satrex.ru/privacy/</loc></url>
+</urlset>

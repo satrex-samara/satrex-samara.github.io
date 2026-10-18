@@ -1,8 +1,36 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { contacts, services } from "./lib/satrex";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      name: "САТРЭКС",
+      url: "https://satrex.ru/",
+      telephone: contacts.phoneHref.replace("tel:", ""),
+      email: contacts.email,
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "RU",
+        addressRegion: "Самарская область",
+        addressLocality: "Самара",
+        streetAddress: "Грузовая станция Кряж, Кбш ЖД",
+      },
+      areaServed: "Самара",
+      openingHours: "Mo-Fr 09:00-16:00",
+    },
+    {
+      "@type": "WebSite",
+      name: "САТРЭКС",
+      url: "https://satrex.ru/",
+    },
+  ],
 };
 
 const advantages = [
@@ -27,6 +55,10 @@ const advantages = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
@@ -90,7 +122,7 @@ export default function Home() {
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {services.map((s) => (
-              <a
+              <Link
                 key={s.slug}
                 href={`/uslugi/${s.slug}/`}
                 className="flex flex-col rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:border-emerald-500/50"
@@ -100,7 +132,7 @@ export default function Home() {
                 <span className="mt-2 text-sm text-slate-400">
                   Подробнее →
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
