@@ -29,7 +29,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="flex flex-col justify-center">
             <p className="mb-4 text-sm font-semibold tracking-widest text-emerald-400 uppercase">
               Самара · станция Кряж · Кбш ЖД
@@ -56,28 +56,6 @@ export default function Home() {
                 Наши услуги
               </a>
             </div>
-          </div>
-          <div className="flex min-h-72 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/20 via-slate-900 to-slate-900 p-8">
-            <dl className="grid w-full max-w-sm grid-cols-2 gap-6 text-center">
-              <div>
-                <dt className="text-2xl font-bold text-emerald-400">10 лет</dt>
-                <dd className="text-sm text-slate-400">
-                  на рынке ж/д логистики
-                </dd>
-              </div>
-              <div>
-                <dt className="text-2xl font-bold text-emerald-400">Кряж</dt>
-                <dd className="text-sm text-slate-400">свои подъездные пути</dd>
-              </div>
-              <div>
-                <dt className="text-2xl font-bold text-emerald-400">РФ</dt>
-                <dd className="text-sm text-slate-400">вся сеть РЖД + Сахалин</dd>
-              </div>
-              <div>
-                <dt className="text-2xl font-bold text-emerald-400">9</dt>
-                <dd className="text-sm text-slate-400">услуг под ключ</dd>
-              </div>
-            </dl>
           </div>
         </div>
       </section>
