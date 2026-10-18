@@ -6,7 +6,7 @@ import CurrentYear from "./current-year";
 import CookieBanner from "./cookie-banner";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://satrex.ru"),
+  metadataBase: new URL("https://satrex-samara.github.io"),
   title: "Железнодорожные грузоперевозки в Самаре — станция Кряж | САТРЭКС",
   description:
     "Железнодорожные грузоперевозки в Самаре и области: станция Кряж, предоставление вагонов, подача и уборка, погрузочно-разгрузочные работы, ж/д адрес грузополучателя. ☎ +7-903-335-24-47",

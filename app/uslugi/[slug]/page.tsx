@@ -36,7 +36,7 @@ export default async function ServicePage({
     ? services.filter((o) => related.includes(o.slug))
     : services.filter((o) => o.slug !== s.slug).slice(0, 2);
 
-  const site = "https://satrex.ru";
+  const site = "https://satrex-samara.github.io";
   const jsonLd = [
     {
       "@context": "https://schema.org",

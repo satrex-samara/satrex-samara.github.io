@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://satrex.ru/sitemap.xml
+Sitemap: https://satrex-samara.github.io/sitemap.xml

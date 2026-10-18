@@ -12,7 +12,7 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       name: "САТРЭКС",
-      url: "https://satrex.ru/",
+      url: "https://satrex-samara.github.io/",
       telephone: contacts.phoneHref.replace("tel:", ""),
       email: contacts.email,
       address: {
@@ -28,7 +28,7 @@ const jsonLd = {
     {
       "@type": "WebSite",
       name: "САТРЭКС",
-      url: "https://satrex.ru/",
+      url: "https://satrex-samara.github.io/",
     },
   ],
 };
