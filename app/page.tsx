@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { contacts, services } from "./lib/satrex";
-import ContactForm from "./contact-form";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -149,7 +148,7 @@ export default function Home() {
 
       {/* Contacts */}
       <section id="contacts">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2">
+        <div className="mx-auto max-w-6xl px-4 py-16">
           <div>
             <h2 className="text-3xl font-bold text-white">Контакты</h2>
             <p className="mt-2 text-slate-400">
@@ -173,9 +172,6 @@ export default function Home() {
               </li>
               <li>📍 {contacts.address}</li>
             </ul>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
-            <ContactForm />
           </div>
         </div>
       </section>
