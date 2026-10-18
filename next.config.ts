@@ -7,6 +7,11 @@ const isStaticExport = process.env.STATIC_EXPORT === "1";
 const nextConfig: NextConfig = {
   /* config options here */
   trailingSlash: true,
+  experimental: {
+    // Tailwind-атомарка маленькая, а сеть РФ→GitHub Pages медленная: инлайн CSS
+    // убирает блокирующий запрос стилей из критического пути первой отрисовки.
+    inlineCss: true,
+  },
   turbopack: {
     root: process.cwd(),
     rules: {
