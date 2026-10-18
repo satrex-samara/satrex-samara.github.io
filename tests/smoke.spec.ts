@@ -36,3 +36,10 @@ test("privacy policy page opens from footer", async ({ page }) => {
     }),
   ).toBeVisible();
 });
+
+test("railway address page shows consignee requisites", async ({ page }) => {
+  await page.goto("/uslugi/zheleznodorozhnyj-adres/");
+  await expect(page.getByText("639608")).toBeVisible();
+  await expect(page.getByText("Код ЕЛС")).toBeVisible();
+  await expect(page.getByText("1005368550")).toBeVisible();
+});

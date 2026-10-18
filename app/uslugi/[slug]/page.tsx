@@ -57,6 +57,23 @@ export default async function ServicePage({
         ))}
       </div>
 
+      {s.requisites?.map((g) => (
+        <section key={g.title}>
+          <h2 className="mt-10 text-2xl font-bold text-white">{g.title}</h2>
+          <dl className="mt-4 max-w-3xl divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50">
+            {g.items.map((r) => (
+              <div
+                key={r.label}
+                className="grid gap-1 p-4 md:grid-cols-[16rem_1fr] md:gap-4"
+              >
+                <dt className="text-sm text-slate-400">{r.label}</dt>
+                <dd className="font-semibold text-slate-200">{r.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ))}
+
       <h2 className="mt-10 text-2xl font-bold text-white">Что входит</h2>
       <ul className="mt-4 max-w-3xl space-y-2 text-slate-300">
         {s.includes.map((item, i) => (
