@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { contacts, getService, services } from "../../lib/satrex";
 
@@ -30,18 +31,57 @@ export default async function ServicePage({
   const s = getService(slug);
   if (!s) notFound();
 
-  const others = services.filter((o) => o.slug !== s.slug).slice(0, 2);
+  const related = s.related;
+  const others = related
+    ? services.filter((o) => related.includes(o.slug))
+    : services.filter((o) => o.slug !== s.slug).slice(0, 2);
+
+  const site = "https://satrex.ru";
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Главная", item: `${site}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Услуги",
+          item: `${site}/#services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: s.h1,
+          item: `${site}/uslugi/${slug}/`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: s.faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <nav className="text-sm text-slate-400">
-        <a href="/" className="hover:text-white">
+        <Link href="/" className="hover:text-white">
           Главная
-        </a>
+        </Link>
         <span className="mx-2">/</span>
-        <a href="/#services" className="hover:text-white">
+        <Link href="/#services" className="hover:text-white">
           Услуги
-        </a>
+        </Link>
         <span className="mx-2">/</span>
         <span className="text-slate-200">{s.h1}</span>
       </nav>
@@ -114,14 +154,14 @@ export default async function ServicePage({
       <h2 className="mt-10 text-2xl font-bold text-white">Смотрите также</h2>
       <div className="mt-4 grid gap-6 md:grid-cols-2">
         {others.map((o) => (
-          <a
+          <Link
             key={o.slug}
             href={`/uslugi/${o.slug}/`}
             className="rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:border-emerald-500/50"
           >
             <h3 className="text-xl font-semibold text-white">{o.h1}</h3>
             <p className="mt-2 font-bold text-emerald-400">{o.price}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
