@@ -1,0 +1,25 @@
+.github/workflows/deploy-pages.yml
+  s_07e7f765053b92::t_352aa4d45bd2cd 44-79
+package.json
+  s_07e7f765053b92::t_32b1bfab2c82ff 9-10
+public/557e5e12-e377-48ea-9137-36b2de82641f.txt
+  s_07e7f765053b92::t_347a5fe14bd10b 1
+scripts/indexnow.mjs
+  s_07e7f765053b92::t_d03b02e50516d5 1-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9bb0b54de16fc9da40979175535a879f6e69b549",
+  "prompts": {},
+  "sessions": {
+    "s_07e7f765053b92": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b8775e19-dd2c-4837-b735-8923cf82482a",
+        "model": "unknown"
+      },
+      "human_author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
