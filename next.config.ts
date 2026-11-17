@@ -6,6 +6,9 @@ const isStaticExport = process.env.STATIC_EXPORT === "1";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  env: {
+    BUILD_YEAR: String(new Date().getFullYear()),
+  },
   trailingSlash: true,
   experimental: {
     // Tailwind-атомарка маленькая, а сеть РФ→GitHub Pages медленная: инлайн CSS
