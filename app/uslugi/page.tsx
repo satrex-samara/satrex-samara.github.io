@@ -1,0 +1,124 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Icon from "../icons";
+import { contacts, services, site } from "../lib/satrex";
+
+export const metadata: Metadata = {
+  title: "Услуги железнодорожной логистики в Самаре — цены и условия",
+  description:
+    "Все услуги САТРЭКС на станции Кряж: аренда полувагонов от 60 000 ₽, ж/д адрес грузополучателя от 15 000 ₽, ПРР кранами КК-32 и КК-16/20, схемы крепления от 35 000 ₽, хранение, взвешивание, комплексная логистика. ☎ +7-903-335-24-47",
+  alternates: { canonical: "/uslugi/" },
+  openGraph: {
+    title: "Услуги железнодорожной логистики в Самаре",
+    description:
+      "Полувагоны и платформы, ПРР, ж/д адрес грузополучателя, схемы крепления, хранение и комплексная логистика на станции Кряж.",
+    url: "/uslugi/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Главная", item: `${site.url}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Услуги",
+          item: `${site.url}/uslugi/`,
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Услуги САТРЭКС",
+      itemListElement: services.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: s.h1,
+        url: `${site.url}/uslugi/${s.slug}/`,
+      })),
+    },
+  ],
+};
+
+export default function ServicesIndex() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <nav className="text-sm text-slate-400" aria-label="Хлебные крошки">
+        <Link href="/" className="transition hover:text-white">
+          Главная
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-slate-200">Услуги</span>
+      </nav>
+
+      <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+        Услуги железнодорожной логистики в Самаре
+      </h1>
+      <p className="mt-4 max-w-3xl text-lg text-slate-300">
+        Полный цикл работ на грузовой станции Кряж Куйбышевской ЖД: от подбора
+        подвижного состава и схем крепления до выгрузки, хранения и выдачи груза
+        автотранспортом. Ниже — все направления и ориентировочные цены.
+      </p>
+
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {services.map((s) => (
+          <Link
+            key={s.slug}
+            href={`/uslugi/${s.slug}/`}
+            className="group flex flex-col rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:-translate-y-0.5 hover:border-emerald-500/50 hover:bg-slate-900"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <h2 className="text-xl font-semibold leading-snug text-white">
+                {s.h1}
+              </h2>
+              <span className="shrink-0 rounded-lg bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-400">
+                {s.price}
+              </span>
+            </div>
+            <p className="mt-3 flex-1 text-sm text-slate-400">{s.summary}</p>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-emerald-400">
+              Условия и реквизиты
+              <Icon name="arrow" className="h-4 w-4" />
+            </span>
+          </Link>
+        ))}
+      </div>
+
+      <div className="mt-12 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6 md:p-8">
+        <h2 className="text-2xl font-bold text-white">
+          Не нашли нужную услугу?
+        </h2>
+        <p className="mt-2 max-w-2xl text-slate-300">
+          Соберём индивидуальную схему перевозки: подберём вагон, посчитаем
+          тариф РЖД и ПРР, согласуем документы. Позвоните или напишите — ответим
+          в рабочее время.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <a
+            href={contacts.phoneHref}
+            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
+          >
+            <Icon name="phone" className="h-4 w-4" />
+            {contacts.phone}
+          </a>
+          <a
+            href={`mailto:${contacts.email}`}
+            className="inline-flex items-center gap-2 rounded-lg border border-white/25 px-5 py-3 font-semibold text-white transition hover:border-white/60"
+          >
+            <Icon name="mail" className="h-4 w-4" />
+            {contacts.email}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

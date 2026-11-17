@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Update when services change: keep in sync with app/lib/satrex.ts -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://satrex-samara.github.io/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/arenda-poluvagonov/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/negabaritnye-gruzy/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/zheleznodorozhnyj-adres/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/pogruzochno-razgruzochnye-raboty/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/terminalno-skladskie-uslugi/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/podacha-uborka-vagonov/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/vzveshivanie-gruzov/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/shemy-pogruzki/</loc></url>
-  <url><loc>https://satrex-samara.github.io/uslugi/kompleksnaya-logistika/</loc></url>
-  <url><loc>https://satrex-samara.github.io/privacy/</loc></url>
+  <url><loc>https://satrex-samara.github.io/</loc><lastmod>2026-11-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/</loc><lastmod>2026-11-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/arenda-poluvagonov/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/negabaritnye-gruzy/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/zheleznodorozhnyj-adres/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/pogruzochno-razgruzochnye-raboty/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/terminalno-skladskie-uslugi/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/podacha-uborka-vagonov/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/vzveshivanie-gruzov/</loc><lastmod>2026-11-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/shemy-pogruzki/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/uslugi/kompleksnaya-logistika/</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://satrex-samara.github.io/privacy/</loc><lastmod>2026-11-17</lastmod><priority>0.3</priority></url>
 </urlset>

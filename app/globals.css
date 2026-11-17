@@ -4,7 +4,39 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-padding-top: 5rem;
+}
+
 body {
   background: #020617;
   color: #e2e8f0;
+}
+
+::selection {
+  background: #00bb7f;
+  color: #020617;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid #00d294;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

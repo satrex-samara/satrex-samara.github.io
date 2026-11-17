@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   description:
     "Порядок обработки и защиты персональных данных посетителей сайта satrex-samara.github.io в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».",
   alternates: { canonical: "/privacy/" },
+  openGraph: {
+  title: "Политика обработки персональных данных",
+    description:
+      "Порядок обработки и защиты персональных данных посетителей сайта САТРЭКС (станция Кряж, Самара).",
+    url: "/privacy/",
+  },
 };
 
 export default function PrivacyPage() {

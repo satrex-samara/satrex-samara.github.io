@@ -43,7 +43,6 @@ const nextConfig: NextConfig = {
               destination: "/",
               permanent: true,
             },
-            { source: "/uslugi", destination: "/", permanent: true },
             { source: "/foto", destination: "/", permanent: true },
             { source: "/gruzoperevozki-gazel", destination: "/", permanent: true },
             { source: "/contacts", destination: "/#contacts", permanent: true },
