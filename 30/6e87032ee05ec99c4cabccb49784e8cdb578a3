@@ -1,0 +1,16 @@
+app/current-year.tsx
+  h_6c47c6fc058efb 2
+next.config.ts
+  h_6c47c6fc058efb 9-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "306e87032ee05ec99c4cabccb49784e8cdb578a3",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
