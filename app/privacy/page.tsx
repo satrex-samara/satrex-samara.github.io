@@ -22,9 +22,42 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://satrex.ru/privacy/#webpage",
+      url: "https://satrex.ru/privacy/",
+      name: "Политика обработки персональных данных",
+      description:
+        "Порядок обработки и защиты персональных данных посетителей сайта satrex.ru в соответствии с Федеральным законом № 152-ФЗ.",
+      inLanguage: "ru-RU",
+      isPartOf: { "@id": "https://satrex.ru/#website" },
+      about: { "@id": "https://satrex.ru/#org" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Главная", item: "https://satrex.ru/" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Политика конфиденциальности",
+          item: "https://satrex.ru/privacy/",
+        },
+      ],
+    },
+  ],
+};
+
 export default function PrivacyPage() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-3xl font-bold text-white">
         Политика в отношении обработки персональных данных
       </h1>
