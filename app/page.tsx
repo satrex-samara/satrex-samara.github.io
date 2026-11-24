@@ -5,6 +5,7 @@ import {
   contacts,
   directions,
   homeFaq,
+  includedAt,
   services,
   site,
   stats,
@@ -364,6 +365,52 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Included */}
+      <section className="border-b border-white/10 bg-slate-900/30">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Что входит
+          </p>
+          <h2 className="mt-2 text-3xl font-bold text-white">
+            Полный цикл: от вагона до выдачи груза
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+              <h3 className="text-lg font-semibold text-white">
+                На станции отправления
+              </h3>
+              <ul className="mt-4 space-y-2.5">
+                {includedAt.from.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-slate-300">
+                    <Icon
+                      name="check"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+              <h3 className="text-lg font-semibold text-white">
+                На станции назначения
+              </h3>
+              <ul className="mt-4 space-y-2.5">
+                {includedAt.to.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-slate-300">
+                    <Icon
+                      name="check"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
