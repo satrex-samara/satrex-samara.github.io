@@ -10,6 +10,13 @@ import Icon from "./icons";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://satrex.ru"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/avatar.png" }],
+  },
   title: {
     default: "Железнодорожные грузоперевозки в Самаре — станция Кряж | САТРЭКС",
     template: "%s | САТРЭКС",
