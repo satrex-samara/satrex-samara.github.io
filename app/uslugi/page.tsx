@@ -101,7 +101,40 @@ export default function ServicesIndex() {
         ))}
       </div>
 
-      <div className="mt-12 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6 md:p-8">
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <Link
+          href="/gruzoperevozki-gazel/"
+          className="group flex flex-col rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/60 hover:bg-emerald-500/10"
+        >
+          <h2 className="text-lg font-semibold text-white">
+            Грузоперевозки бортовой Газелью
+          </h2>
+          <p className="mt-2 flex-1 text-sm text-slate-400">
+            Автомобильные перевозки по Самаре и области: борт 5,2 × 2 м, до
+            1,5 т, дизель, безнал с НДС.
+          </p>
+          <span className="mt-4 text-sm font-semibold text-emerald-400">
+            Подробнее и цены →
+          </span>
+        </Link>
+        <Link
+          href="/uslugi/arenda-poluvagonov/"
+          className="group flex flex-col rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:-translate-y-0.5 hover:border-emerald-500/50 hover:bg-slate-900"
+        >
+          <h2 className="text-lg font-semibold text-white">
+            Аренда полувагонов
+          </h2>
+          <p className="mt-2 flex-1 text-sm text-slate-400">
+            Подача полувагонов под погрузку на станции Кряж, перевозка от
+            60 000 ₽.
+          </p>
+          <span className="mt-4 text-sm font-semibold text-emerald-400">
+            Условия →
+          </span>
+        </Link>
+      </div>
+
+      <div className="mt-6 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6 md:p-8">
         <h2 className="text-2xl font-bold text-white">
           Не нашли нужную услугу?
         </h2>

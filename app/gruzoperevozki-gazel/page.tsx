@@ -466,6 +466,24 @@ export default function GazelPage() {
           <Link href="/" className="text-emerald-300 hover:underline">
             satrex.ru
           </Link>
+          . Другие направления:{" "}
+          <Link href="/uslugi/" className="text-emerald-300 hover:underline">
+            все услуги
+          </Link>
+          ,{" "}
+          <Link
+            href="/uslugi/arenda-poluvagonov/"
+            className="text-emerald-300 hover:underline"
+          >
+            аренда полувагонов
+          </Link>
+          ,{" "}
+          <Link
+            href="/uslugi/pogruzochno-razgruzochnye-raboty/"
+            className="text-emerald-300 hover:underline"
+          >
+            погрузо-разгрузочные работы
+          </Link>
           .
         </p>
       </section>
