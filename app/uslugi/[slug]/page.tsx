@@ -25,6 +25,14 @@ export async function generateMetadata({
       title: s.title,
       description: s.description,
       url: `/uslugi/${slug}/`,
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: `САТРЭКС — ${s.title}`,
+        },
+      ],
     },
   };
 }
