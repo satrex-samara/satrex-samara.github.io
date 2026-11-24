@@ -3,6 +3,7 @@ import Link from "next/link";
 import Icon from "./icons";
 import {
   contacts,
+  containerTypes,
   directions,
   homeFaq,
   includedAt,
@@ -460,6 +461,87 @@ export default function Home() {
             Не знаете, какой вагон нужен? Позвоните — подберём подвижной состав и
             рассчитаем тариф.
           </p>
+        </div>
+      </section>
+
+      {/* Containers */}
+      <section id="containers" className="border-b border-white/10 bg-slate-900/30 scroll-mt-20">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Контейнеры
+          </p>
+          <h2 className="mt-2 text-3xl font-bold text-white">
+            Контейнерные перевозки по сети РЖД
+          </h2>
+          <p className="mt-3 max-w-3xl text-slate-400">
+            Отправка грузов в контейнерах со станции Кряж: закрытая конструкция
+            защищает груз от осадков и пыли, а контейнерные поезда сокращают срок
+            доставки за счёт отсутствия промежуточных остановок. Работаем «от двери
+            до двери»: подача порожнего контейнера, погрузка, терминальная
+            обработка, вывоз получателю.
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[1.25fr_.75fr]">
+            <div className="overflow-hidden rounded-2xl border border-white/10">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead className="bg-slate-900/80 text-slate-300">
+                  <tr>
+                    <th scope="col" className="px-5 py-4 font-semibold">
+                      Тип контейнера
+                    </th>
+                    <th scope="col" className="px-5 py-4 font-semibold">
+                      Грузоподъёмность
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {containerTypes.map((c) => (
+                    <tr key={c.type}>
+                      <td className="px-5 py-4 font-medium text-white">{c.type}</td>
+                      <td className="whitespace-nowrap px-5 py-4 text-emerald-400">
+                        {c.payload}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+              <h3 className="text-lg font-semibold text-white">
+                Что берём на себя
+              </h3>
+              <ul className="mt-4 space-y-2.5">
+                {includedAt.from.slice(0, 5).map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-slate-300">
+                    <Icon
+                      name="check"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400"
+                    />
+                    {item}
+                  </li>
+                ))}
+                <li className="flex gap-3 text-sm text-slate-300">
+                  <Icon
+                    name="check"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400"
+                  />
+                  Погрузка груза в контейнер и паллетирование
+                </li>
+                <li className="flex gap-3 text-sm text-slate-300">
+                  <Icon
+                    name="check"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400"
+                  />
+                  Вывоз контейнера получателю автотранспортом
+                </li>
+              </ul>
+              <Link
+                href="/uslugi/"
+                className="mt-5 inline-block text-sm font-semibold text-emerald-400 transition hover:text-emerald-300"
+              >
+                Все услуги и цены →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
