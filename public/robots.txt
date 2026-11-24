@@ -1,4 +1,8 @@
-User-Agent: *
+User-agent: *
 Allow: /
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&utm_referrer&utm_id&yclid&gclid&ysclid
 
 Sitemap: https://satrex.ru/sitemap.xml
