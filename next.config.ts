@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-// STATIC_EXPORT=1 — сборка для GitHub Pages: статика в out/, сайт в корне satrex-samara.github.io.
+// STATIC_EXPORT=1 — сборка для GitHub Pages: статика в out/, сайт в корне satrex.ru.
 // PPR (cacheComponents) и redirects в export-режиме не поддерживаются.
 const isStaticExport = process.env.STATIC_EXPORT === "1";
 

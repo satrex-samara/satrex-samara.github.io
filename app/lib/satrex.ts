@@ -431,7 +431,7 @@ export function getService(slug: string): Service | undefined {
 }
 
 export const site = {
-	url: 'https://satrex-samara.github.io',
+	url: 'https://satrex.ru',
 	name: 'САТРЭКС',
 	legalName: 'ООО «Самарская транспортная экспедиция»',
 	station: 'Кряж',

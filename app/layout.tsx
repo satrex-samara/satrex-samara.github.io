@@ -9,7 +9,7 @@ import MobileNav from "./mobile-nav";
 import Icon from "./icons";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://satrex-samara.github.io"),
+  metadataBase: new URL("https://satrex.ru"),
   title: {
     default: "Железнодорожные грузоперевозки в Самаре — станция Кряж | САТРЭКС",
     template: "%s | САТРЭКС",

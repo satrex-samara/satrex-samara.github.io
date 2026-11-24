@@ -64,9 +64,9 @@ jobs:
               raise SystemExit("IndexNow key file not found")
           PY
           )
-          echo "Checking https://satrex-samara.github.io/${KEY}.txt"
+          echo "Checking https://satrex.ru/${KEY}.txt"
           for i in $(seq 1 18); do
-            if curl -fsS "https://satrex-samara.github.io/${KEY}.txt" | grep -qx "$KEY"; then
+            if curl -fsS "https://satrex.ru/${KEY}.txt" | grep -qx "$KEY"; then
               echo "Key file is live"
               exit 0
             fi

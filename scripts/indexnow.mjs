@@ -1,13 +1,13 @@
 /**
  * Submit sitemap URLs to IndexNow (Bing, Yandex, Seznam, Naver, etc.).
- * Key file must be at https://satrex-samara.github.io/{key}.txt
+ * Key file must be at https://satrex.ru/{key}.txt
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const host = "satrex-samara.github.io";
+const host = "satrex.ru";
 const endpoint = "https://api.indexnow.org/indexnow";
 
 function findKey() {
