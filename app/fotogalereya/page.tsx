@@ -172,6 +172,29 @@ export default function FotoPage() {
           </a>
         </div>
       ))}
+
+      <div className="mt-12 rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+        <h2 className="text-lg font-semibold text-white">Смотрите также</h2>
+        <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {[
+            ["/uslugi/", "Все услуги"],
+            ["/gruzoperevozki-gazel/", "Грузоперевозки Газелью"],
+            ["/uslugi/arenda-poluvagonov/", "Аренда полувагонов"],
+            ["/uslugi/pogruzochno-razgruzochnye-raboty/", "Погрузо-разгрузочные работы"],
+            ["/uslugi/shemy-pogruzki/", "Схемы погрузки"],
+            ["/#contacts", "Контакты"],
+          ].map(([href, label]) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className="text-emerald-400 transition hover:text-emerald-300"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

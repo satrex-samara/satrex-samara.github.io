@@ -302,45 +302,31 @@ export default function Home() {
       <section className="border-b border-white/10 bg-slate-900/30">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <div className="overflow-hidden rounded-3xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/10 via-slate-900/70 to-slate-900/70">
-            <div className="grid md:grid-cols-[1.3fr_.7fr]">
-              <div className="p-6 md:p-9">
-                <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-300">
-                  Автоперевозки
-                </span>
-                <h2 className="mt-4 text-2xl font-bold leading-snug text-white md:text-3xl">
-                  Грузоперевозки бортовой Газелью
-                </h2>
-                <p className="mt-3 max-w-xl text-slate-300">
-                  Открытый борт 5,2 × 2 м, до 1,5 тонн, дизель. Самара и
-                  Самарская область: стройматериалы, оборудование, паллеты,
-                  переезды юрлиц. Безнал с НДС, ТН и счёт-фактура.
-                </p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Link
-                    href="/gruzoperevozki-gazel/"
-                    className="rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
-                  >
-                    Подробнее и цены
-                  </Link>
-                  <a
-                    href="tel:+79033352447"
-                    className="rounded-xl border border-white/20 px-5 py-3 font-semibold text-white transition hover:border-emerald-400 hover:text-emerald-300"
-                  >
-                    +7 903 335-24-47
-                  </a>
-                </div>
-              </div>
-              <div className="relative hidden md:block">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/gazel/og.png"
-                  alt="Бортовая Газель 5,2 м — грузоперевозки по Самаре и области"
-                  width={1200}
-                  height={630}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover"
-                />
+            <div className="p-6 md:p-9">
+              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-300">
+                Автоперевозки
+              </span>
+              <h2 className="mt-4 text-2xl font-bold leading-snug text-white md:text-3xl">
+                Грузоперевозки бортовой Газелью
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate-300">
+                Открытый борт 5,2 × 2 м, до 1,5 тонн, дизель. Самара и
+                Самарская область: стройматериалы, оборудование, паллеты,
+                переезды юрлиц. Безнал с НДС, ТН и счёт-фактура.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/gruzoperevozki-gazel/"
+                  className="rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
+                >
+                  Подробнее и цены
+                </Link>
+                <a
+                  href="tel:+79033352447"
+                  className="rounded-xl border border-white/20 px-5 py-3 font-semibold text-white transition hover:border-emerald-400 hover:text-emerald-300"
+                >
+                  +7 903 335-24-47
+                </a>
               </div>
             </div>
           </div>

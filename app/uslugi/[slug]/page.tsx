@@ -249,6 +249,23 @@ export default async function ServicePage({
         ))}
       </div>
 
+      <Link
+        href="/gruzoperevozki-gazel/"
+        className="mt-4 flex flex-col gap-1 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-6 transition hover:border-emerald-400/60 hover:bg-emerald-500/10 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <span>
+          <span className="block text-lg font-semibold text-white">
+            Грузоперевозки бортовой Газелью
+          </span>
+          <span className="mt-1 block text-sm text-slate-400">
+            Автомобильная доставка по Самаре и области: борт 5,2 × 2 м, до 1,5 т.
+          </span>
+        </span>
+        <span className="shrink-0 text-sm font-semibold text-emerald-400">
+          Подробнее →
+        </span>
+      </Link>
+
       <p className="mt-8 text-sm">
         <Link
           href="/uslugi/"
