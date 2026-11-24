@@ -164,6 +164,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     Все услуги →
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="transition hover:text-white"
+                    href="/gruzoperevozki-gazel/"
+                  >
+                    Газель бортовая
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="transition hover:text-white"
+                    href="/fotogalereya/"
+                  >
+                    Фотогалерея
+                  </Link>
+                </li>
               </ul>
             </nav>
 
