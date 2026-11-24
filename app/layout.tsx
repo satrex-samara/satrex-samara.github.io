@@ -94,6 +94,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <Link className="transition hover:text-white" href="/uslugi/">
                 Услуги
               </Link>
+              <Link className="transition hover:text-white" href="/fotogalereya/">
+                Фото
+              </Link>
               <Link className="transition hover:text-white" href="/#about">
                 О компании
               </Link>

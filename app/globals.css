@@ -40,3 +40,74 @@ summary::-webkit-details-marker {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Лайтбокс фотогалереи (CSS-only, через :target) ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  place-items: center;
+  padding: 24px;
+  background: rgba(2, 6, 23, 0.94);
+  overflow: auto;
+}
+
+.lightbox:target {
+  display: grid;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: zoom-out;
+}
+
+.lightbox__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+}
+
+.lightbox__content img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+}
+
+.lightbox__content figcaption {
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 60ch;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.lightbox__close:hover {
+  background: #00bb7f;
+  border-color: #00bb7f;
+  color: #020617;
+}

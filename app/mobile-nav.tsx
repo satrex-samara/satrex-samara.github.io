@@ -7,6 +7,7 @@ import { contacts } from "./lib/satrex";
 
 const links = [
   { href: "/uslugi/", label: "Услуги" },
+  { href: "/fotogalereya/", label: "Фотогалерея" },
   { href: "/#about", label: "О компании" },
   { href: "/#directions", label: "Направления" },
   { href: "/#faq", label: "Вопросы" },
