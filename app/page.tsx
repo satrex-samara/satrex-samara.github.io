@@ -44,12 +44,20 @@ const jsonLd = {
       priceRange: "от 15 000 ₽",
       address: {
         "@type": "PostalAddress",
-        addressCountry: "RU",
-        addressRegion: "Самарская область",
+        streetAddress: contacts.street,
         addressLocality: "Самара",
-        streetAddress: "Грузовая станция Кряж, Куйбышевская железная дорога",
+        addressRegion: "Самарская область",
+        postalCode: contacts.postalCode,
+        addressCountry: "RU",
       },
       geo: { "@type": "GeoCoordinates", latitude: 53.2, longitude: 50.15 },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: contacts.phoneHref.replace("tel:", ""),
+        email: contacts.email,
+        availableLanguage: "Russian",
+      },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -515,7 +523,7 @@ export default function Home() {
             Пришлите род груза, вес, объём и станции отправления и назначения —
             подготовим расчёт тарифа и схему перевозки.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <a
               href={contacts.phoneHref}
               className="rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:border-emerald-500/50"
@@ -543,6 +551,16 @@ export default function Home() {
                 {contacts.hours}
               </p>
               <p className="mt-1 text-sm text-slate-400">{contacts.address}</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+              <Icon name="pin" className="h-6 w-6 text-emerald-400" />
+              <p className="mt-3 text-sm text-slate-400">Адрес</p>
+              <p className="mt-1 text-base font-semibold text-white">
+                {contacts.addressFull}
+              </p>
+              <p className="mt-1 text-sm text-slate-400">
+                {contacts.position}: {contacts.director}
+              </p>
             </div>
           </div>
         </div>

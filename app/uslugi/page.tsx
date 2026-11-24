@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "../icons";
-import { contacts, services, site } from "../lib/satrex";
+import { contacts, priceList, services, site } from "../lib/satrex";
 
 export const metadata: Metadata = {
   title: "Услуги железнодорожной логистики в Самаре — цены и условия",
@@ -99,6 +99,28 @@ export default function ServicesIndex() {
             </span>
           </Link>
         ))}
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Стоимость услуг</h2>
+        <p className="mt-2 max-w-2xl text-slate-400">
+          Базовые ставки на грузовые операции на станции Кряж. Итоговая цена
+          зависит от расстояния, типа подвижного состава и условий погрузки —
+          точный расчёт по заявке.
+        </p>
+        <div className="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50">
+          {priceList.map((p) => (
+            <div
+              key={p.service}
+              className="flex flex-col gap-1 border-b border-white/10 px-5 py-4 last:border-b-0 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+            >
+              <span className="text-sm text-slate-300">{p.service}</span>
+              <b className="text-sm font-semibold text-emerald-400 sm:text-right">
+                {p.price}
+              </b>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
