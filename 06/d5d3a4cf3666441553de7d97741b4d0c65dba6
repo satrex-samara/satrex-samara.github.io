@@ -1,0 +1,14 @@
+app/lib/satrex.ts
+  h_6c47c6fc058efb 80,88,95,115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "06d5d3a4cf3666441553de7d97741b4d0c65dba6",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
