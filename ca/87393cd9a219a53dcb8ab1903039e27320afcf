@@ -1,0 +1,16 @@
+app/not-found.tsx
+  h_6c47c6fc058efb 1-44
+public/robots.txt
+  h_6c47c6fc058efb 1,4-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ca87393cd9a219a53dcb8ab1903039e27320afcf",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
