@@ -1,0 +1,22 @@
+app/fotogalereya/page.tsx
+  h_6c47c6fc058efb 1-177
+app/globals.css
+  h_6c47c6fc058efb 43-113
+app/layout.tsx
+  h_6c47c6fc058efb 97-99
+app/mobile-nav.tsx
+  h_6c47c6fc058efb 10
+public/sitemap.xml
+  h_6c47c6fc058efb 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "88721cf04667f4af383178ee1542523fe0ac1cc1",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
