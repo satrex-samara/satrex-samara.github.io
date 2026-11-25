@@ -1,0 +1,18 @@
+app/fotogalereya/page.tsx
+  h_6c47c6fc058efb 175-197
+app/page.tsx
+  h_6c47c6fc058efb 305-329
+app/uslugi/[slug]/page.tsx
+  h_6c47c6fc058efb 252-268
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "77f5e4d6521dd796aa413bec4303b20019907c1b",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
