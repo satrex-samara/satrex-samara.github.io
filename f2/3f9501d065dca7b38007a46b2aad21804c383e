@@ -1,0 +1,16 @@
+app/globals.css
+  h_6c47c6fc058efb 5-9,17-20,22-29,37-43,51,68-232
+app/page.tsx
+  h_6c47c6fc058efb 110-114,118-119,134,152,156,168,207,225,283,296,298,318,353,365,379,388,404,425,474,514,555,572,587,623,649,682,690
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f23f9501d065dca7b38007a46b2aad21804c383e",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
