@@ -224,7 +224,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
           <div className="border-t border-white/10">
-            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
               <p>
                 © <CurrentYear /> САТРЭКС, Самара. Грузовая станция Кряж Кбш ЖД.
               </p>
@@ -232,6 +232,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </footer>
+
+        <div className="mobile-cta">
+          <a
+            href={contacts.phoneHref}
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950"
+          >
+            <Icon name="phone" className="h-4 w-4" />
+            Позвонить
+          </a>
+          <a
+            href={`mailto:${contacts.email}`}
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-4 py-3 text-sm font-semibold text-white"
+          >
+            <Icon name="mail" className="h-4 w-4" />
+            Написать
+          </a>
+        </div>
 
         <CookieBanner />
       </body>

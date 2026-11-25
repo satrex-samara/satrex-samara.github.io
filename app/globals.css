@@ -230,6 +230,56 @@ tbody tr {
   }
 }
 
+/* ---------- Карточки: чётче отделить от фона ---------- */
+
+.card {
+  background-color: rgba(17, 28, 46, 0.72);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+/* ---------- Мобильная закреплённая панель действий ---------- */
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 68px;
+  }
+
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(2, 6, 23, 0.92);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-cta > * {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* ---------- Тап-таргеты инлайн-ссылок ---------- */
+
+  .card a:not(.btn),
+  .site-footer a,
+  .footer-grid a {
+    display: inline-block;
+    padding-block: 6px;
+    margin-block: -6px;
+  }
+}
+
 /* ---------- Лайтбокс фотогалереи (CSS-only, через :target) ---------- */
 
 .lightbox {

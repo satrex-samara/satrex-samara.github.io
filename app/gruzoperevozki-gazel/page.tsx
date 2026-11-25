@@ -361,7 +361,7 @@ export default function GazelPage() {
             </ul>
           </div>
         </div>
-        <p className="mt-4 text-sm text-slate-500">
+        <p className="mt-4 text-sm text-slate-400">
           Работаем только по безналичному расчёту с НДС. Счёт выставляем после
           согласования заявки.{" "}
           <b className="text-slate-300">Расчёт наличными и без НДС не выполняем.</b>
@@ -437,7 +437,7 @@ export default function GazelPage() {
               key={k}
               className="rounded-2xl border border-white/10 bg-slate-900/50 p-5"
             >
-              <h3 className="text-sm uppercase tracking-wide text-slate-500">{k}</h3>
+              <h3 className="text-sm uppercase tracking-wide text-slate-400">{k}</h3>
               <a
                 href={href}
                 className="mt-1 block text-lg font-semibold text-emerald-300 hover:underline"
@@ -447,20 +447,20 @@ export default function GazelPage() {
             </div>
           ))}
           <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-            <h3 className="text-sm uppercase tracking-wide text-slate-500">
+            <h3 className="text-sm uppercase tracking-wide text-slate-400">
               Время работы
             </h3>
             <p className="mt-1 font-semibold text-white">Пн–Пт 09:00–16:00</p>
             <p className="text-sm text-slate-400">Сб–Вс — выходной</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-            <h3 className="text-sm uppercase tracking-wide text-slate-500">Адрес</h3>
+            <h3 className="text-sm uppercase tracking-wide text-slate-400">Адрес</h3>
             <p className="mt-1 font-semibold text-white">
               г. Самара, грузовая станция Кряж, Кбш ЖД
             </p>
           </div>
         </div>
-        <p className="mt-4 text-sm text-slate-500">
+        <p className="mt-4 text-sm text-slate-400">
           САТРЭКС — собственная площадка на станции Кряж. Железнодорожные
           перевозки — на{" "}
           <Link href="/" className="text-emerald-300 hover:underline">

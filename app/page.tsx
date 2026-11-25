@@ -304,7 +304,7 @@ export default function Home() {
                 <p className="mt-2 flex-1 text-sm text-slate-400">{s.summary}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold text-emerald-400">{s.price}</span>
-                  <span className="text-sm text-slate-500 transition group-hover:text-emerald-400">
+                  <span className="text-sm text-slate-400 transition group-hover:text-emerald-400">
                     Подробнее →
                   </span>
                 </div>
@@ -463,7 +463,7 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-sm text-slate-500">
+          <p className="mt-3 text-sm text-slate-400">
             Не знаете, какой вагон нужен? Позвоните — подберём подвижной состав и
             рассчитаем тариф.
           </p>
