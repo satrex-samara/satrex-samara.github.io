@@ -1,0 +1,16 @@
+app/layout.tsx
+  h_6c47c6fc058efb 13-19
+public/favicon.svg
+  h_6c47c6fc058efb 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "884a3a881e1127ea659a45dd408997d2934a7fa1",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
