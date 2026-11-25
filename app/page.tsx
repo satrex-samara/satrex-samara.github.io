@@ -107,10 +107,16 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_70%_at_70%_0%,rgba(0,187,127,0.16),transparent_65%)]"
         />
+        <div className="grid-lines pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div
+          className="hero-glow pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full"
+          aria-hidden="true"
+        />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-start">
             <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-emerald-400">
+              <p className="mb-4 flex items-center gap-2.5 text-sm font-semibold uppercase tracking-widest text-emerald-400">
+                <span className="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" />
                 Самара · станция Кряж · Кбш ЖД
               </p>
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl">
@@ -125,7 +131,7 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href={contacts.phoneHref}
-                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
+                  className="btn-shine inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
                 >
                   <Icon name="phone" className="h-5 w-5" />
                   {contacts.phone}
@@ -143,11 +149,11 @@ export default function Home() {
                 {stats.map((s) => (
                   <div
                     key={s.label}
-                    className="rounded-2xl border border-white/10 bg-slate-900/50 p-4"
+                    className="card rounded-2xl border border-white/10 bg-slate-900/50 p-4"
                   >
                     <dt className="sr-only">{s.label}</dt>
                     <dd>
-                      <span className="block text-xl font-bold text-white">
+                      <span className="stat-value block text-xl font-bold">
                         {s.value}
                       </span>
                       <span className="mt-1 block text-xs text-slate-400">
@@ -159,7 +165,7 @@ export default function Home() {
               </dl>
             </div>
 
-            <aside className="rounded-2xl border border-emerald-500/30 bg-slate-900/60 p-6">
+            <aside className="card rounded-2xl border border-emerald-500/30 bg-slate-900/60 p-6">
               <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-emerald-400">
                 <Icon name="spark" className="h-4 w-4" />
                 Инфраструктура терминала
@@ -198,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-white/10 bg-slate-900/40">
+      <section className="reveal border-b border-white/10 bg-slate-900/40">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-4 text-sm text-slate-400">
           <span className="font-semibold text-slate-200">
             Работаем по стандартам РЖД:
@@ -216,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="border-b border-white/10 scroll-mt-20">
+      <section id="about" className="reveal border-b border-white/10 scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             О компании
@@ -274,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="border-b border-white/10 scroll-mt-20">
+      <section id="services" className="reveal border-b border-white/10 scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Услуги
@@ -287,9 +293,9 @@ export default function Home() {
               <Link
                 key={s.slug}
                 href={`/uslugi/${s.slug}/`}
-                className="group flex flex-col rounded-2xl border border-white/10 bg-slate-900/50 p-6 transition hover:-translate-y-0.5 hover:border-emerald-500/50 hover:bg-slate-900"
+                className="card group flex flex-col rounded-2xl border border-white/10 bg-slate-900/50 p-6"
               >
-                <span className="grid h-10 w-10 place-items-center rounded-lg bg-emerald-500/10 text-emerald-400">
+                <span className="card-icon grid h-10 w-10 place-items-center rounded-lg bg-emerald-500/10 text-emerald-400">
                   <Icon name={serviceIcons[s.slug]} className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 text-lg font-semibold leading-snug text-white">
@@ -309,7 +315,7 @@ export default function Home() {
       </section>
 
       {/* Gazelle promo */}
-      <section className="border-b border-white/10 bg-slate-900/30">
+      <section className="reveal border-b border-white/10 bg-slate-900/30">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <div className="overflow-hidden rounded-3xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/10 via-slate-900/70 to-slate-900/70">
             <div className="p-6 md:p-9">
@@ -344,7 +350,7 @@ export default function Home() {
       </section>
 
       {/* Steps */}
-      <section className="border-b border-white/10">
+      <section className="reveal border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Как мы работаем
@@ -356,7 +362,7 @@ export default function Home() {
             {steps.map((s, i) => (
               <li
                 key={s.title}
-                className="rounded-2xl border border-white/10 bg-slate-900/50 p-6"
+                className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6"
               >
                 <span className="text-sm font-bold text-emerald-400">
                   0{i + 1}
@@ -370,7 +376,7 @@ export default function Home() {
       </section>
 
       {/* Included */}
-      <section className="border-b border-white/10 bg-slate-900/30">
+      <section className="reveal border-b border-white/10 bg-slate-900/30">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Что входит
@@ -379,7 +385,7 @@ export default function Home() {
             Полный цикл: от вагона до выдачи груза
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+            <div className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6">
               <h3 className="text-lg font-semibold text-white">
                 На станции отправления
               </h3>
@@ -395,7 +401,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+            <div className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6">
               <h3 className="text-lg font-semibold text-white">
                 На станции назначения
               </h3>
@@ -416,7 +422,7 @@ export default function Home() {
       </section>
 
       {/* Wagon types */}
-      <section className="border-b border-white/10">
+      <section className="reveal border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Подвижной состав
@@ -465,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* Containers */}
-      <section id="containers" className="border-b border-white/10 bg-slate-900/30 scroll-mt-20">
+      <section id="containers" className="reveal border-b border-white/10 bg-slate-900/30 scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Контейнеры
@@ -505,7 +511,7 @@ export default function Home() {
                 </tbody>
               </table>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+            <div className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6">
               <h3 className="text-lg font-semibold text-white">
                 Что берём на себя
               </h3>
@@ -546,7 +552,7 @@ export default function Home() {
       </section>
 
       {/* Directions */}
-      <section id="directions" className="border-b border-white/10 scroll-mt-20">
+      <section id="directions" className="reveal border-b border-white/10 scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             География
@@ -563,7 +569,7 @@ export default function Home() {
             {directions.map((d) => (
               <div
                 key={d.title}
-                className="rounded-2xl border border-white/10 bg-slate-900/50 p-5"
+                className="card rounded-2xl border border-white/10 bg-slate-900/50 p-5"
               >
                 <h3 className="flex items-center gap-2 font-semibold text-white">
                   <Icon name="route" className="h-4 w-4 text-emerald-400" />
@@ -578,7 +584,7 @@ export default function Home() {
       </section>
 
       {/* Documents */}
-      <section className="border-b border-white/10">
+      <section className="reveal border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <div className="rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6 md:p-8">
             <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
@@ -614,7 +620,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="border-b border-white/10 scroll-mt-20">
+      <section id="faq" className="reveal border-b border-white/10 scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Вопросы и ответы
@@ -640,7 +646,7 @@ export default function Home() {
       </section>
 
       {/* Contacts */}
-      <section id="contacts" className="scroll-mt-20">
+      <section id="contacts" className="reveal scroll-mt-20">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Контакты
@@ -673,7 +679,7 @@ export default function Home() {
                 {contacts.email}
               </p>
             </a>
-            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+            <div className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6">
               <Icon name="clock" className="h-6 w-6 text-emerald-400" />
               <p className="mt-3 text-sm text-slate-400">Режим работы</p>
               <p className="mt-1 text-lg font-semibold text-white">
@@ -681,7 +687,7 @@ export default function Home() {
               </p>
               <p className="mt-1 text-sm text-slate-400">{contacts.address}</p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+            <div className="card rounded-2xl border border-white/10 bg-slate-900/50 p-6">
               <Icon name="pin" className="h-6 w-6 text-emerald-400" />
               <p className="mt-3 text-sm text-slate-400">Адрес</p>
               <p className="mt-1 text-base font-semibold text-white">
