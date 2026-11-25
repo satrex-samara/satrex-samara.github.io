@@ -1,0 +1,14 @@
+app/privacy/page.tsx
+  h_6c47c6fc058efb 25-53,57-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fc6c9f92d98b3abf4d6df77b5e7a6798f23fcaf0",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
