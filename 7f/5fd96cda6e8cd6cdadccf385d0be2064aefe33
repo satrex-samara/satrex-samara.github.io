@@ -1,0 +1,18 @@
+app/gruzoperevozki-gazel/page.tsx
+  h_6c47c6fc058efb 1-474
+app/layout.tsx
+  h_6c47c6fc058efb 167-182
+public/sitemap.xml
+  h_6c47c6fc058efb 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7f5fd96cda6e8cd6cdadccf385d0be2064aefe33",
+  "prompts": {},
+  "humans": {
+    "h_6c47c6fc058efb": {
+      "author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
