@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "./icons";
 import {
@@ -192,6 +193,18 @@ export default function Home() {
                   Круглосуточная охрана, весовой контроль, упаковка
                 </li>
               </ul>
+              <figure className="mt-5 overflow-hidden rounded-xl border border-white/10">
+                <Image
+                  src="/gallery/20.jpg"
+                  alt="Автокран выгружает крупногабаритную технику с железнодорожной платформы на станции Кряж"
+                  width={1600}
+                  height={764}
+                  sizes="(min-width: 1024px) 40vw, calc(100vw - 2rem)"
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[16/9] w-full object-cover"
+                />
+              </figure>
               <Link
                 href="/uslugi/zheleznodorozhnyj-adres/"
                 className="mt-6 inline-block text-sm font-semibold text-emerald-400 transition hover:text-emerald-300"

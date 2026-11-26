@@ -233,8 +233,8 @@ tbody tr {
 /* ---------- Карточки: чётче отделить от фона ---------- */
 
 .card {
-  background-color: rgba(17, 28, 46, 0.72);
-  border-color: rgba(255, 255, 255, 0.09);
+  background-color: #111c2e;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 /* ---------- Мобильная закреплённая панель действий ---------- */
@@ -246,6 +246,7 @@ tbody tr {
 @media (max-width: 767px) {
   body {
     padding-bottom: 68px;
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
   }
 
   .mobile-cta {
@@ -256,7 +257,8 @@ tbody tr {
     bottom: 0;
     z-index: 40;
     gap: 10px;
-    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    padding: 10px 14px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
     background: rgba(2, 6, 23, 0.92);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
@@ -269,14 +271,23 @@ tbody tr {
     text-align: center;
   }
 
+  .cookie-banner {
+    bottom: 68px;
+    bottom: calc(68px + env(safe-area-inset-bottom));
+  }
+
   /* ---------- Тап-таргеты инлайн-ссылок ---------- */
 
-  .card a:not(.btn),
-  .site-footer a,
-  .footer-grid a {
+  .card a:not(.btn) {
     display: inline-block;
-    padding-block: 6px;
-    margin-block: -6px;
+    min-height: 44px;
+    padding-block: 12px;
+  }
+
+  .site-footer a {
+    display: block;
+    min-height: 44px;
+    padding-block: 12px;
   }
 }
 

@@ -134,7 +134,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
 
-        <footer className="border-t border-white/10 bg-slate-950">
+        <footer className="site-footer border-t border-white/10 bg-slate-950">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
             <div>
               <p className="flex items-center gap-2 text-lg font-bold text-white">
@@ -233,7 +233,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </footer>
 
-        <div className="mobile-cta">
+        <nav className="mobile-cta" aria-label="Связаться с САТРЭКС">
           <a
             href={contacts.phoneHref}
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950"
@@ -246,9 +246,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-4 py-3 text-sm font-semibold text-white"
           >
             <Icon name="mail" className="h-4 w-4" />
-            Написать
+            E-mail
           </a>
-        </div>
+        </nav>
 
         <CookieBanner />
       </body>

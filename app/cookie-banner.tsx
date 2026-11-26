@@ -15,7 +15,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-slate-900/95 backdrop-blur">
+    <div className="cookie-banner fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-slate-900/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm text-slate-300 md:flex-row md:items-center md:justify-between">
         <p>
           Мы используем файлы cookie, чтобы сайт работал корректно. Продолжая
