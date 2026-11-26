@@ -12,7 +12,10 @@ test("homepage terminal photo uses a local responsive image", async ({ page }) =
   });
 
   await expect(image).toHaveAttribute("loading", "eager");
-  await expect(image).toHaveAttribute("sizes", /40vw/);
+  await expect(image).toHaveAttribute("src", "/gallery/20.jpg");
+  await expect(image).toHaveClass(/w-full/);
+  await expect(image).toHaveAttribute("width", "1600");
+  await expect(image).toHaveAttribute("height", "764");
   await expect
     .poll(() => image.evaluate((element) => (element as HTMLImageElement).naturalWidth))
     .toBeGreaterThan(0);

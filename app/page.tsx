@@ -199,9 +199,9 @@ export default function Home() {
                   alt="Автокран выгружает крупногабаритную технику с железнодорожной платформы на станции Кряж"
                   width={1600}
                   height={764}
-                  sizes="(min-width: 1024px) 40vw, calc(100vw - 2rem)"
                   loading="eager"
                   decoding="async"
+                  unoptimized
                   className="aspect-[16/9] w-full object-cover"
                 />
               </figure>
