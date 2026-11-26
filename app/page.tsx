@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "./icons";
+import PagePhotoGallery from "./page-photo-gallery";
 import {
   contacts,
   containerTypes,
@@ -14,6 +15,7 @@ import {
   steps,
   wagonTypes,
 } from "./lib/satrex";
+import { pagePhotoSets } from "./lib/page-photos";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -713,6 +715,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <PagePhotoGallery photos={pagePhotoSets.home} />
     </>
   );
 }

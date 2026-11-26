@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PagePhotoGallery from "../page-photo-gallery";
+import { pagePhotoSets } from "../lib/page-photos";
 
 export const metadata: Metadata = {
   title: "Грузоперевозки бортовой Газелью в Самаре и области",
@@ -487,6 +489,7 @@ export default function GazelPage() {
           .
         </p>
       </section>
+      <PagePhotoGallery photos={pagePhotoSets.gazelle} contained />
     </section>
   );
 }

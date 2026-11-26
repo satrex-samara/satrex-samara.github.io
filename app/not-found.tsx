@@ -1,4 +1,6 @@
 import Link from "next/link";
+import PagePhotoGallery from "./page-photo-gallery";
+import { pagePhotoSets } from "./lib/page-photos";
 
 export default function NotFound() {
   return (
@@ -39,6 +41,7 @@ export default function NotFound() {
           Контакты
         </Link>
       </div>
+      <PagePhotoGallery photos={pagePhotoSets.notFound} contained />
     </section>
   );
 }

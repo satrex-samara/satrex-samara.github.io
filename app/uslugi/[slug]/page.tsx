@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Icon from "../../icons";
+import PagePhotoGallery from "../../page-photo-gallery";
 import { contacts, getService, services, site } from "../../lib/satrex";
+import { servicePhotoSets } from "../../lib/page-photos";
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -45,6 +47,8 @@ export default async function ServicePage({
   const { slug } = await params;
   const s = getService(slug);
   if (!s) notFound();
+  const photos = servicePhotoSets[slug];
+  if (!photos) throw new Error(`Missing photo set for service: ${slug}`);
 
   const related = s.related;
   const others = related
@@ -274,6 +278,7 @@ export default async function ServicePage({
           ← Все услуги и цены
         </Link>
       </p>
+      <PagePhotoGallery photos={photos} contained />
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import PagePhotoGallery from "../page-photo-gallery";
 import { contacts } from "../lib/satrex";
+import { pagePhotoSets } from "../lib/page-photos";
 
 export const metadata: Metadata = {
   title: "Политика обработки персональных данных",
@@ -261,6 +263,7 @@ export default function PrivacyPage() {
           E-mail: {contacts.email}, телефон: {contacts.phone}
         </p>
       </div>
+      <PagePhotoGallery photos={pagePhotoSets.privacy} contained />
     </section>
   );
 }

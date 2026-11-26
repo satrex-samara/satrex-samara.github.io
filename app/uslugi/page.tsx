@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "../icons";
+import PagePhotoGallery from "../page-photo-gallery";
 import { contacts, priceList, services, site } from "../lib/satrex";
+import { pagePhotoSets } from "../lib/page-photos";
 
 export const metadata: Metadata = {
   title: "Услуги железнодорожной логистики в Самаре — цены и условия",
@@ -182,6 +184,7 @@ export default function ServicesIndex() {
           </a>
         </div>
       </div>
+      <PagePhotoGallery photos={pagePhotoSets.services} contained />
     </div>
   );
 }
