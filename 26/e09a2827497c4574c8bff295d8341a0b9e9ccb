@@ -1,0 +1,34 @@
+app/page.tsx
+  s_e9728d6861f20b::t_67ed4e3925fe94 2,196-202,204-207
+  s_e9728d6861f20b::t_d139aa5ef008e4 203
+tests/smoke.spec.ts
+  s_e9728d6861f20b::t_d139aa5ef008e4 14
+  s_e9728d6861f20b::t_67ed4e3925fe94 8-13,15-61
+app/layout.tsx
+  s_e9728d6861f20b::t_67ed4e3925fe94 137,236,249,251
+app/cookie-banner.tsx
+  s_e9728d6861f20b::t_67ed4e3925fe94 18
+package.json
+  s_e9728d6861f20b::t_7706638b085dd4 13
+app/globals.css
+  s_e9728d6861f20b::t_da764c88e16888 260-261,275
+  s_e9728d6861f20b::t_67ed4e3925fe94 236-237,249,274,276-278,281,283-290
+package-lock.json
+  s_e9728d6861f20b::t_32eda6c4635399 11,1145-1147,1194-1196,1210-1212,1226-1228,1245-1247,1264-1266,1283-1285,1302-1304,1318-1320,5291-5293,5296,5310-5318
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "26e09a2827497c4574c8bff295d8341a0b9e9ccb",
+  "prompts": {},
+  "sessions": {
+    "s_e9728d6861f20b": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "dc8f0b46-21a2-433a-8d5e-41f2cffd4959",
+        "model": "unknown"
+      },
+      "human_author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
