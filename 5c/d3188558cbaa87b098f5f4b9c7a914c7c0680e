@@ -1,0 +1,47 @@
+app/lib/page-photos.ts
+  s_e9728d6861f20b::t_21bca479319e6b 1-197
+app/uslugi/page.tsx
+  s_e9728d6861f20b::t_fe6cee9207d8c2 187
+  s_e9728d6861f20b::t_21bca479319e6b 4,6
+app/page.tsx
+  s_e9728d6861f20b::t_21bca479319e6b 5,18,718
+app/page-photo-gallery.tsx
+  s_e9728d6861f20b::t_0b11ca32429085 58,73
+  s_e9728d6861f20b::t_fe6cee9207d8c2 7,10,15-19
+  s_e9728d6861f20b::t_21bca479319e6b 1-6,8-9,11-14,20-57,59-72,74-83
+app/gruzoperevozki-gazel/page.tsx
+  s_e9728d6861f20b::t_fe6cee9207d8c2 492
+  s_e9728d6861f20b::t_21bca479319e6b 3-4
+app/uslugi/[slug]/page.tsx
+  s_e9728d6861f20b::t_21bca479319e6b 5,7,50-51
+  s_e9728d6861f20b::t_fe6cee9207d8c2 281
+app/not-found.tsx
+  s_e9728d6861f20b::t_fe6cee9207d8c2 44
+  s_e9728d6861f20b::t_21bca479319e6b 2-3
+app/privacy/page.tsx
+  s_e9728d6861f20b::t_fe6cee9207d8c2 266
+  s_e9728d6861f20b::t_21bca479319e6b 2,4
+tests/smoke.spec.ts
+  s_e9728d6861f20b::t_0b620b1b33f896 135
+  s_e9728d6861f20b::t_7f65a981173f86 153,166-173
+  s_e9728d6861f20b::t_32d0f759935cf9 134
+  s_e9728d6861f20b::t_21bca479319e6b 103-106,109-133,136-152,154-165,175
+  s_e9728d6861f20b::t_f700ed2556172b 107-108
+  s_e9728d6861f20b::t_777dedf3e3a0e5 174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5cd3188558cbaa87b098f5f4b9c7a914c7c0680e",
+  "prompts": {},
+  "sessions": {
+    "s_e9728d6861f20b": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "dc8f0b46-21a2-433a-8d5e-41f2cffd4959",
+        "model": "unknown"
+      },
+      "human_author": "fedkov365 <lef365@gmail.com>"
+    }
+  }
+}
